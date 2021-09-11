@@ -1,0 +1,58 @@
+{% load static%}
+<div class="illustration">
+	<div class="i-large"></div>
+	<div class="i-medium"></div>
+	<div class="i-small"></div>
+</div>
+
+
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="{% url 'index'%}"><img class="iconlogo" src="{% static 'img/iconlogo.png'%}" width="50"> NagTech</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+													<a type="button" class="page-scroll dropdown-toggle" data-toggle="dropdown">
+														 All Technology
+
+													<div class="dropdown-menu">
+														<a href="{% url 'index'%}" class="dropdown-item"> all technology</a>
+
+														{% for catagory in links%}
+										        <a class="dropdown-item" href="{{ catagory.get_url}}">{{catagory.catagory_name}} </a><br>
+										        {% endfor %}
+
+													</div>
+
+											</a>
+                    </li>
+										<li>
+												<a class="page-scroll" href="#coupon">About Me</a>
+										</li>
+
+                    <li>
+                        <a class="page-scroll" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.zuthemes.com/freebies/zuchristmas-free-landing-page-for-holidays/" class="menuhighlight"><i class="fa fa-cloud-download"></i> Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>

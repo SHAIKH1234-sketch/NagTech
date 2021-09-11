@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NagTech</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Varela:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Great+Vibes|Marmelad" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'css/theme.css'%}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  {% block content %}
+{% endblock %}
+
+{% include 'includes/footer.html'%}
+
+<!-- jQuery -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+<script src="{% static 'js/validate.js' %}"></script>
+
+</body>
+
+</html>
